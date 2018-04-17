@@ -1,0 +1,106 @@
+﻿@model StorageTablaClientes.Models.Cliente
+
+@{
+    ViewBag.Title = "DetallesCliente";
+}
+
+<h2>DetallesCliente</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PartitionKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartitionKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Timestamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timestamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisableCompiledSerializers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisableCompiledSerializers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisablePropertyResolverCache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisablePropertyResolverCache)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

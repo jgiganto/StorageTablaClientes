@@ -1,0 +1,45 @@
+﻿@model List<StorageTablaClientes.Models.Cliente>
+@{
+    ViewBag.Title = "ClientesEmpresa";
+}
+
+<h2>Clientes Empresa</h2>
+<form method="post">
+    <div>
+        <label>Nombre de empresa:</label>
+        <input type="text" name="empresa" class="form-control" />
+        <button type="submit" class="btn-success">Buscar Clientes</button>
+    </div>
+</form>
+<hr />
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>NOMBRE</th>
+            <th>APELLIDOS</th>
+            <th>EMPRESA</th>
+            <td></td>
+        </tr>
+        @foreach(var cliente in Model)
+        {
+        <tr>
+            <td>@cliente.Nombre</td>
+            <td>@cliente.Apellidos</td>
+            <td>@cliente.Empresa</td>
+            <td>
+                @Html.ActionLink("Detalles","DetallesCliente","Clientes",
+               new { rowkey=cliente.IdCliente
+               ,partitionkey=cliente.Empresa},null)|
+                 @Html.ActionLink("Modificar","ModificarCliente","Clientes",
+               new { rowkey=cliente.IdCliente
+               ,partitionkey=cliente.Empresa},null)|
+                 @Html.ActionLink("Eliminar","EliminarCliente","Clientes",
+               new { rowkey=cliente.IdCliente
+               ,partitionkey=cliente.Empresa},null)
+            </td>
+        </tr>
+        }
+
+    </table>
+}
